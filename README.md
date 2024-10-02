@@ -12,3 +12,7 @@ Las media queries fueron esenciales para ajustar el diseño y la presentación e
 Para enriquecer la experiencia visual, se incorporaron transiciones y transformaciones. Estas características permiten que los cambios en el estado de los elementos (como los botones de reproducción o pausa) se realicen de manera suave, mejorando la interactividad y la fluidez del uso. Además, se utilizaron animaciones para dar vida a ciertos elementos, como el desplazamiento de carátulas de álbumes o efectos al pasar el cursor, creando así una experiencia más envolvente y atractiva para el usuario.
 
 En resumen, el desarrollo de la página REMUSIC no solo se enfoca en la funcionalidad, sino también en la estética y la experiencia del usuario, asegurando que cada interacción sea intuitiva y visualmente placentera.
+
+### Vista mobile
+
+![screenshot](https://github.com/rimardev/m2d4-remusic/blob/main/assets/img/screenshot.jpg)
