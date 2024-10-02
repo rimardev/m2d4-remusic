@@ -1,0 +1,332 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 
+  "navbar"    
+  "main"
+  "control"
+  "footer";
+  grid-template-rows: 60px 1fr 50px 70px;
+}
+
+/* -------------------------------------------------navbar */
+.navbar {
+  grid-area: navbar;
+  background-color: #313131;
+  color: tomato;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;    
+}
+.navbar-logo {    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;    
+}
+.marca {
+  font-size: 24px;
+  font-weight: 800;
+  margin-left: 15px;    
+}
+
+/* ::::::::::::::::::::::::::animacion equalizador */
+.ecualizer {
+  width: 40px;
+  height: 40px;
+  border: 1px solid tomato;
+  border-radius: 5px;
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+}
+.eq-main {
+  width: 30px;
+  height: 30px;      
+  background-color: tomato;
+  display: flex;
+}
+.eq-band {
+  width: 3px;
+  height: 100%;    
+}
+.secuencia1 {
+  background-color: #313131;
+  animation-name: secuencia1;
+  animation-duration: 400ms;
+  animation-iteration-count: infinite;
+}
+@keyframes secuencia1 {
+  from {
+      height: 0%;
+  }
+  to {
+      height: 100%;
+  }
+}
+.secuencia2 {
+  background-color: #313131;
+  animation-name: secuencia2;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite;
+}
+@keyframes secuencia2 {
+  from {
+      height: 25%;
+  }
+  to {
+      height: 100%;
+  }
+}
+.secuencia3 {
+  background-color: #313131;
+  animation-name: secuencia3;
+  animation-duration: 450ms;
+  animation-iteration-count: infinite;
+}
+@keyframes secuencia3 {
+  from {
+      height: 40%;
+  }
+  to {
+      height: 100%;
+  }
+}
+/* :::::::::::::::::::::fin animacion equalizador */
+
+.navbar-menu ul {    
+  display: none;
+  list-style: none;
+  padding: 10px;           
+}
+.navbar-menu li {    
+  padding: 10px;
+  color: tomato;
+  border: 1px solid #313131;
+  transition: all 250ms ease-out;
+}
+.navbar-menu li:hover {    
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;  
+}
+.navbar-menu-icon {
+  font-size: 15px;
+  padding: 15px;
+}
+
+/* ------------------------------------------------galeria musica */
+.main {
+  grid-area: main;
+  background-color: #525252;    
+  display: grid;
+  grid-template-columns: 1fr;    
+  overflow-y: scroll;   
+  gap: 5px;    
+}
+.item-music {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------------------------------------tarjeta musica */
+.card-music {
+  width: 250px;
+  height: 350px;
+  margin: 10px auto;   
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column; 
+  transform: scale(1);
+  filter: grayscale(100%);
+  transition: all 250ms ease-out;       
+}
+.card-music:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);       
+}
+.card-img {
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+.card-title {
+  text-align: center;
+  font-size: 14px;    
+  color: white;
+  padding: 3px
+}
+.card-info {
+  text-align: center;
+  font-size: 12px;    
+  color: white;
+  padding: 3px;
+}
+.card-btn {
+  width: 90px;
+  height: 35px;
+  font-size: 14px;
+  color: white;
+  background-color: gray;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  align-self: center;
+  transition: background-color 200ms ease-out;    
+}
+.card-btn:hover {
+  background-color: tomato;
+  cursor: pointer;
+}
+
+.img1 {    
+  background-image: url(../img/mileycyrus-plastichearts.jpg);     
+}
+.img2 {    
+  background-image: url(../img/alexubago-ellaviveenmi.jpg);    
+}
+.img3 {    
+  background-image: url(../img/fcavalenzuela-tajoabierto.jpg);    
+}
+.img4 {    
+  background-image: url(../img/weeknd-blindinglight.jpg);    
+}
+.img5 {    
+  background-image: url(../img/ladyGaga-discoheaven.png);    
+}
+.img6 {    
+  background-image: url(../img/weeknd-afterhours.jpg);    
+}
+.img7 {    
+  background-image: url(../img/fcavalenzuela_prenderemosfuego.jpg);    
+}
+.img8 {    
+  background-image: url(../img/kylieminogue-cantgetyououtofmyhead.jpg);    
+}
+.img9 {    
+  background-image: url(../img/petshopboys-behaviour.jpg);    
+}
+.img10 {    
+  background-image: url(../img/mileycirus-cantbetamed.jpg);    
+}
+.img11 {    
+  background-image: url(../img/britneySpears-ILoveRockRoll.jpg);    
+}
+.img12 {    
+  background-image: url(../img/deeppurple-theplatinumcollection.jpg);    
+}
+
+/* ---------------------------------------------control audio */
+.control {
+  grid-area: control;
+  background-color: #414141;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.control-func {
+  color: tomato;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid tomato;
+  border-radius: 5px;
+  transition: color 200ms ease-out;
+}
+.control-func:hover {
+  color: white;
+  cursor: pointer;    
+}
+
+/* ---------------------------------------------------Footer */
+.footer {
+  grid-area: footer;
+  background-color: #313131;
+  color: tomato;    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icon i {
+  font-size: 20px;
+  padding: 5px;
+}
+.footer p {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::: media query 576px tablet */
+@media screen and (min-width: 576px) {
+  .container {
+      grid-template-areas: 
+      "navbar navbar navbar"
+      "main main main"
+      "control control control"
+      "footer footer footer";
+      grid-template-rows: 60px 1fr 50px 70px;
+  }
+  .navbar {        
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .ecualizer {
+      margin-left: 15px;
+  }
+  .navbar-menu ul {
+      display: initial;
+      display: flex;       
+  }
+  .navbar-menu-icon {
+      display: none;
+  }     
+  .main {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+/* :::::::::::::::::::::::::::::::::::::::::: media query 992px desktop */
+@media screen and (min-width: 992px) {
+  .container {        
+      grid-template-areas: 
+      "navbar main main main main"
+      "navbar main main main main"        
+      "footer control control control control";
+      grid-template-rows: 60px 1fr 70px;
+  }
+  .navbar {
+      min-width: 230px;
+      flex-direction: column;        
+      justify-content: flex-start;
+  }
+  .ecualizer {
+      margin-top: 10px;
+  }
+  .marca {
+      margin-top: 5px;
+  }
+  .navbar-menu ul {
+      display: initial;               
+  }       
+  .navbar-menu-icon {
+      display: none;
+  }    
+  .main {        
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);        
+  }     
+}
+
